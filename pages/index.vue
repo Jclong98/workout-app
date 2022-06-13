@@ -3,7 +3,7 @@ const { items } = useLibrary()
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative h-full">
     <nav class="bg-white p-4 flex items-center justify-between shadow">
       <h1
         class="bg-fuchsia-200 px-4 py-1 rounded-full border text-fuchsia-600 font-semibold"
@@ -16,7 +16,7 @@ const { items } = useLibrary()
       </div>
     </nav>
 
-    <main class="p-4">
+    <main class="p-4 grow">
       <div class="card mb-4">
         <h2 class="font-semibold text-2xl mb-3">History</h2>
 
