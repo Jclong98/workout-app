@@ -30,7 +30,7 @@ const emit = defineEmits<{
     </div>
 
     <!-- delete button -->
-    <button @click="emit('remove', value.id)">
+    <button @click="emit('remove', value.id)" :title="`Remove ${value.name}`">
       <i class="i-mdi-delete"></i>
     </button>
   </div>

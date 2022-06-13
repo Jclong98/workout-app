@@ -5,7 +5,12 @@ const emit = defineEmits<{
   (e: 'update:modelValue', value: number): void
 }>()
 
-const value = ref(props.modelValue)
+const value = computed({
+  get: () => props.modelValue,
+  set: (value) => {
+    emit('update:modelValue', value)
+  },
+})
 
 const updateValue = (n: number) => {
   if (typeof value.value !== 'number') {
@@ -18,10 +23,6 @@ const updateValue = (n: number) => {
     value.value = 0
   }
 }
-
-watch(value, (n) => {
-  emit('update:modelValue', n)
-})
 </script>
 
 <template>
