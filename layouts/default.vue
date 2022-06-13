@@ -7,6 +7,6 @@
 <style>
 html,
 body {
-  background-color: rgb(240, 240, 240);
+  @apply bg-gray-100;
 }
 </style>

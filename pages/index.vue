@@ -18,7 +18,7 @@ const { items } = useLibrary()
 
     <main class="p-4">
       <div class="card mb-4">
-        <h2 class="semibold text-2xl mb-3">History</h2>
+        <h2 class="font-semibold text-2xl mb-3">History</h2>
 
         <div class="border rounded h-100px"></div>
       </div>
