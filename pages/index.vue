@@ -44,7 +44,7 @@ const { items } = useLibrary()
     <!-- floating action button tailwind -->
     <div class="absolute bottom-4 right-4">
       <NuxtLink
-        to="/new-session"
+        to="/sessions/new"
         class="grid place-items-center bg-fuchsia-500 text-white p-4 rounded-full text-3xl shadow-2xl"
       >
         <i class="i-mdi-plus"></i>

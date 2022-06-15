@@ -54,13 +54,15 @@ const removeExercise = (id: string) => {
 const library = useLibrary()
 
 const createSession = () => {
+  const id = Date.now().toString()
+
   library.items.value.push({
-    id: Date.now().toString(),
+    id: id,
     title: title.value,
     exercises: exercises.value,
   })
 
-  navigateTo('/')
+  navigateTo('/sessions/' + id)
 }
 </script>
 
