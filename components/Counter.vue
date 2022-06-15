@@ -8,6 +8,8 @@ const emit = defineEmits<{
 const value = computed({
   get: () => props.modelValue,
   set: (value) => {
+    if (typeof value !== 'number') return
+    if (value < 0) value = 0
     emit('update:modelValue', value)
   },
 })
@@ -18,10 +20,6 @@ const updateValue = (n: number) => {
   }
 
   value.value += n
-
-  if (value.value < 0) {
-    value.value = 0
-  }
 }
 </script>
 
@@ -36,6 +34,7 @@ const updateValue = (n: number) => {
     <input
       class="w-12 p-1 rounded border border-gray-500/50 text-center"
       type="number"
+      min="0"
       v-model.number="value"
     />
     <button
