@@ -164,9 +164,12 @@ const createSession = () => {
 .exercises-leave-active {
   transition: all 0.5s ease;
 }
-.exercises-enter-from,
-.exercises-leave-to {
+.exercises-enter-from {
   opacity: 0;
   transform: translateX(30px);
+}
+.exercises-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
 }
 </style>
