@@ -134,12 +134,14 @@ const createSession = () => {
         Exercises
       </h2>
 
-      <ExerciseCard
-        v-for="exercise in exercises"
-        :key="exercise.id"
-        :value="exercise"
-        @remove="removeExercise($event)"
-      />
+      <TransitionGroup name="exercises">
+        <ExerciseCard
+          v-for="exercise in exercises"
+          :key="exercise.id"
+          :value="exercise"
+          @remove="removeExercise($event)"
+        />
+      </TransitionGroup>
 
       <p v-if="!exercises.length" class="text-center opacity-70">
         Add an exercise to see them here
@@ -156,3 +158,15 @@ const createSession = () => {
     </div>
   </div>
 </template>
+
+<style>
+.exercises-enter-active,
+.exercises-leave-active {
+  transition: all 0.5s ease;
+}
+.exercises-enter-from,
+.exercises-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+</style>
