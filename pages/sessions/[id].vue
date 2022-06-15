@@ -30,7 +30,7 @@ const totalProgress = currentSession.value.exercises.reduce(
       ></div>
     </div>
 
-    <main class="p-4 flex flex-col gap-2">
+    <main class="p-4 flex flex-col gap-4">
       <ProgressItem
         v-for="exercise of currentSession.exercises"
         :key="exercise.id"
