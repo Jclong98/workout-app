@@ -39,7 +39,7 @@ const canInc = computed(() => progress.value < props.value.sets)
       <div class="flex gap-2">
         <div
           v-for="i in value.sets"
-          class="border h-4 w-4 rounded"
+          class="border border-gray/50 h-4 w-4 rounded transition duration-200"
           :class="{
             'bg-fuchsia-500': i <= progress && canInc,
             'bg-green-400': !canInc,

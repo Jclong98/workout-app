@@ -19,6 +19,7 @@ const totalProgress = currentSession.value.exercises.reduce(
       <h1>{{ currentSession.title }}</h1>
     </nav>
 
+    <!-- progress bar -->
     <div class="w-full bg-gray-300 h-2.5">
       <div
         class="h-2.5 transition-all duration-200"
