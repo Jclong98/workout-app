@@ -1,4 +1,5 @@
 import { Exercise } from '~/assets/types'
+import { useStorage } from '@vueuse/core'
 
 interface LibraryItem {
   id: string
@@ -7,7 +8,7 @@ interface LibraryItem {
 }
 
 export const useLibrary = () => {
-  const items = useState<LibraryItem[]>('library-items', () => [
+  const items = useStorage<LibraryItem[]>('library-items', [
     {
       id: '1',
       title: 'Full Body',

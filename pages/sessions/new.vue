@@ -51,12 +51,12 @@ const removeExercise = (id: string) => {
   exercises.value = exercises.value.filter((exercise) => exercise.id !== id)
 }
 
-const library = useLibrary()
+const { addItem } = useLibrary()
 
 const createSession = () => {
   const id = Date.now().toString()
 
-  library.items.value.push({
+  addItem({
     id: id,
     title: title.value,
     exercises: exercises.value,
