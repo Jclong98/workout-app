@@ -67,7 +67,7 @@ const createSession = () => {
 </script>
 
 <template>
-  <div>
+  <div class="h-full flex flex-col">
     <nav class="bg-white p-4 flex items-center shadow gap-2 text-xl">
       <NuxtLink to="/" class="i-mdi-arrow-left" title="Home"></NuxtLink>
       <h1>New Session</h1>
@@ -131,7 +131,7 @@ const createSession = () => {
       </button>
     </div>
 
-    <div class="card rounded-t-[50px] rounded-b-0 grid gap-4 px-8">
+    <div class="card rounded-t-[50px] rounded-b-0 flex flex-col gap-4 px-8 mt-4 flex-1">
       <h2 class="text-center mt-2 text-xl font-semibold tracking-wider">
         Exercises
       </h2>
@@ -148,6 +148,9 @@ const createSession = () => {
       <p v-if="!exercises.length" class="text-center opacity-70">
         Add an exercise to see them here
       </p>
+
+      <!-- spacer -->
+      <div class="flex-1"></div>
 
       <!-- create session button -->
       <button
